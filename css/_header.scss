@@ -1,0 +1,112 @@
+.header {
+    @include flex (row, space-between);
+    
+    padding: 50px 60px 30px 60px;
+
+    background: #323264;    
+
+    .header__container {
+        @include flex (column, center);       
+        align-items: flex-end;
+        
+        line-height: 1.1875rem;
+
+        .header__item {
+            @include flex (row, space-between);
+            align-items: center;   
+            
+            position: relative;
+            width: 478px;
+
+            span,
+            a {
+                color: #FFFFFF;    
+            }
+
+            input {
+                display: none;
+            }
+
+            label {
+                @include flex (row, center);
+                align-items: center; 
+
+                cursor: pointer;
+
+                width: 33px;
+                height: 25px;
+                border-radius: 8px;
+
+                &:hover {
+                    background: #FFFFFF33;
+                    transition: 0.8s;
+                }
+
+                .label__text {
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    line-height: 0.875rem;
+                    text-transform: uppercase;   
+                }
+            } 
+            
+            #check__lngUk:checked + label,
+            #check__lngRu:checked + label,
+            #check__lngEn:checked + label {                
+                background-color: #F0145A;
+                transition: 0.5s;
+            }
+
+            .header__text {
+                font-weight: 400;                
+            }
+
+            .header__link {
+                font-weight: 700;
+            }
+            
+            .header__svg--special {
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                opacity: 0;
+            }
+
+            .header__link--special:hover .header__svg {
+                opacity: 0;
+                transition: 0.5s;
+            }
+
+            .header__link--special:hover .header__svg--special {
+               opacity: 1;
+               transition: 0.5s;
+            }        
+        }            
+
+        .nav {
+            @include flex (row, space-between);
+    
+            width: 416px;
+    
+            margin-top: 16px;
+        
+            .nav__link {
+                padding-bottom: 3px;
+
+                font-weight: 700;
+    
+                color: #FFFFFF;
+
+                &:hover {
+                    border-bottom: 2px solid;
+                }
+            }
+
+            .nav__link--special {
+                color: #F0145A;                
+                border-bottom: 2px solid;
+            }
+        }
+    }
+}
