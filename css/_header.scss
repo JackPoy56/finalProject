@@ -1,76 +1,300 @@
-@media screen and (min-width: 370px) {
-    .header {
-        @include flex (column, space-between);
+body {
+    background-color: #323264;
+}
 
-        position: relative;        
-        padding: 50px 60px 5px 60px;
+.header {
+    @include flex (column, space-between);
+
+    position: relative;   
+        
+    .header__logo {
+        @include flex (row, space-between); 
+        align-items: center;
+
+        margin: 60px 15px 10px 15px;
+
+        svg {
+            width: 69.33px;
+            height: 32px;            
+        }
+    }
+
+    #check__menu {
+        display: none;
+
+        &:checked ~ .header__container .nav{
+            display: block;            
+        }
+
+        &:checked ~ label .header__burger {                
+            border-radius: 8px;
+            background: #E6E6F0;
+        }
+
+        &:checked ~ #nav__triangle + label > span {
+            display: table;
+        }
+    }
+
+    .header__burger {
+        position: absolute;
+        top: 57.5px;
+        right: 15px;
+        
+        width: 32px;
+        height: 32px;         
+        cursor: pointer;           
+
+        & span {
+            position: absolute;
+            top: 15px;
+            left: 7px;
+            
+            width: 18px;
+            height: 2px;
+
+            background-color: #FFFFFF;                              
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+
+            width: 18px;
+            height: 2px;
+
+            transition: 0.2s all;
+            background-color: #FFFFFF;
+        }
+
+        &::before {
+            top: 9px;                
+        }
+
+        &::after {
+            bottom: 9px;
+        }          
+    }
+
+    #nav__triangle {
+        display: none;           
+        position: relative;            
+
+        & + label > span {
+            position: absolute;
+            top: 121px;
+            right: 27px;
+            z-index: 4;
+
+            display: none;
+            width: 18px;
+            height: 18px;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;    
+
+                width: 18px;
+                height: 2px;
+
+                background-color: #EC6F5D;                    
+            }
+
+            &::before {
+                bottom: 8px;
+                transform: rotate(-45deg);
+            }                        
     
-        background: #323264;   
+            &::after {
+                bottom: 8px;
+                transform: rotate(45deg);
+            }    
+        }               
+    }              
+ 
+    .header__container {
+        @include flex (column, center);       
+        align-items: flex-start;
+                    
+        line-height: 1.1875rem;            
+        
+        .header__item {
+            @include flex (row, flex-start);
+            align-items: center;   
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            width: $size;
+            padding: 10px 15px;            
+            
+            background: #F5F5FA33;
+            
+            span,
+            a {
+                color: #FFFFFF;    
+            }
+
+            input {
+                display: none;
+            }
+
+            label {
+                @include flex (row, center);
+                align-items: center; 
+
+                cursor: pointer;
+
+                width: 33px;
+                height: 25px;
+                border-radius: 8px;
+
+                &:hover {
+                    background: #FFFFFF33;
+                    transition: 0.8s;
+                }
+
+                .label__text {
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    line-height: 0.875rem;
+                    text-transform: uppercase;   
+                }
+            } 
+            
+            #check__lngUk:checked + label,
+            #check__lngRu:checked + label,
+            #check__lngEn:checked + label {                
+                background-color: #F0145A;
+                transition: 0.5s;
+            }
+
+            .header__text {
+                display: none;
+            }                               
+
+            & > svg {
+                display: none;
+            }
+
+            .header__link {                                        
+                position: absolute;
+                top: 12.5px;
+                right: 15px;
+
+                font-weight: 700;
+            }                
+
+            .header__svg,
+            .header__svg--special {
+                display: none;
+            }  
+        }            
+
+        .nav {
+            @include flex (column, center);
+            align-items: center;    
+            
+            position: absolute;
+            top: 105px;
+            left: 0;
+            
+            display: none;
+            width: 100% - 4.266%;            
+            margin: 0 2.13%;
+            padding: 64px 12px 12px;
+
+            background: #FFFFFF;
+            border-radius: 12px 12px 0px 0px;
+
+            .nav__item {
+                width: $size;
+                margin-top: 15px;
+                padding: 7px 0;
+
+                text-align: center;
+
+                background: #F5F5FA;
+                border-radius: 12px;
+            }
+
+            .nav__link {
+                padding-bottom: 3px;
+
+                font-weight: 700;
+
+                color: #24A3FF;
+                &:hover {
+                    border-bottom: 2px solid;
+                }
+            }
+
+            .nav__link--special {
+                color: #F0145A;                
+                border-bottom: 2px solid;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {   
+        padding: 50px 60px 5px 60px;            
         
         .header__logo {
-            margin-top: 55px;
+            margin: 55px 0 0 0;
+
+            svg {
+                width: 130px;
+                height: 60px;
+            }
+        }
+        
+        .header__burger {
+            display: none;
+        }
+
+        #nav__triangle {
+            & + label > span {                
+                display: none;                
+            }
         }
     
-        .header__container {
-            @include flex (column, center);       
-            align-items: flex-start;
-                        
-            line-height: 1.1875rem;            
-            
+        .header__container {  
+
             .header__item {
-                @include flex (row, space-between);
-                align-items: center;   
-                
-                position: absolute;
+                @include flex (row, space-between);                  
+                                
                 top: 50px;
                 left: 60px;
+
                 width: 482px;
-    
-                span,
-                a {
-                    color: #FFFFFF;    
-                }
-    
-                input {
-                    display: none;
-                }
-    
-                label {
-                    @include flex (row, center);
-                    align-items: center; 
-    
-                    cursor: pointer;
-    
-                    width: 33px;
-                    height: 25px;
-                    border-radius: 8px;
-    
-                    &:hover {
-                        background: #FFFFFF33;
-                        transition: 0.8s;
-                    }
-    
-                    .label__text {
-                        font-size: 0.75rem;
-                        font-weight: 700;
-                        line-height: 0.875rem;
-                        text-transform: uppercase;   
-                    }
-                } 
-                
-                #check__lngUk:checked + label,
-                #check__lngRu:checked + label,
-                #check__lngEn:checked + label {                
-                    background-color: #F0145A;
-                    transition: 0.5s;
-                }
-    
+                padding: 0;
+
+                background: none;                       
+                    
                 .header__text {
+                    display: table;
+
                     font-weight: 400;                
                 }
+
+                & > svg {
+                    display: table;
+                }
     
-                .header__link {
-                    font-weight: 700;
+                .header__link {                    
+                    position: static;
+                }
+
+                .header__svg,
+                .header__svg--special {
+                    display: table;
                 }
                 
                 .header__svg--special {
@@ -94,34 +318,34 @@
     
             .nav {
                 @include flex (row, space-between);
-        
+                        
+                position: static;                                               
+               
                 width: 416px;
-        
-                margin-top: 30px;
+                margin: 30px 0 0 0;
+                padding: 0; 
+                
+                background: none;
+                border-radius: 0;
+
+                .nav__item {
+                    width: max-content;
+                    margin-top: 0;
+                    padding: 0;
+                        
+                    background: none;
+                    border-radius: 0;
+                }
             
-                .nav__link {
-                    padding-bottom: 3px;
-    
-                    font-weight: 700;
-        
+                .nav__link {                   
                     color: #FFFFFF;
-    
-                    &:hover {
-                        border-bottom: 2px solid;
-                    }
-                }
-    
-                .nav__link--special {
-                    color: #F0145A;                
-                    border-bottom: 2px solid;
-                }
+                }       
             }
         }
     }   
 }  
 
-@media screen and (min-width: 1440px) {
-
+@media screen and (min-width: 1024px) {
     .header {
         @include flex (row, space-between);
 
@@ -139,11 +363,17 @@
             .header__item {                
                 position: static;
                 width: 478px;
-            }    
+            }                     
 
             .nav {              
                 margin-top: 16px;       
             }
         }
+    }
+}   
+
+@media screen and (min-width: 1920px) {
+    .header {
+        padding: 50px 160px 5px 160px;
     }
 }            
