@@ -5,8 +5,9 @@ body {
 .header {
     @include flex (column, space-between);
 
-    position: relative;   
-        
+    position: relative; 
+    z-index: 10; 
+            
     .header__logo {
         @include flex (row, space-between); 
         align-items: center;
@@ -193,8 +194,7 @@ body {
                 font-weight: 700;
             }                
 
-            .header__svg,
-            .header__svg--special {
+            .header__link--special svg {
                 display: none;
             }  
         }            
@@ -205,7 +205,7 @@ body {
             
             position: absolute;
             top: 105px;
-            left: 0;
+            left: 0;           
             
             display: none;
             width: 100% - 4.266%;            
@@ -295,28 +295,15 @@ body {
                     position: static;
                 }
 
-                .header__svg,
-                .header__svg--special {
+                .header__link--special svg {
                     display: table;
                 }
-                
-                .header__svg--special {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-    
-                    opacity: 0;
-                }
-    
-                .header__link--special:hover .header__svg {
-                    opacity: 0;
+                    
+                .header__link--special:hover svg > path {
+                    fill: #F0145A;
+                    
                     transition: 0.5s;
-                }
-    
-                .header__link--special:hover .header__svg--special {
-                   opacity: 1;
-                   transition: 0.5s;
-                }        
+                }      
             }            
     
             .nav {

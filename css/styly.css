@@ -14,6 +14,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  z-index: 10;
 }
 
 .header .header__logo {
@@ -233,8 +234,7 @@ body {
   font-weight: 700;
 }
 
-.header .header__container .header__item .header__svg,
-.header .header__container .header__item .header__svg--special {
+.header .header__container .header__item .header__link--special svg {
   display: none;
 }
 
@@ -331,23 +331,11 @@ body {
   .header .header__container .header__item .header__link {
     position: static;
   }
-  .header .header__container .header__item .header__svg,
-  .header .header__container .header__item .header__svg--special {
+  .header .header__container .header__item .header__link--special svg {
     display: table;
   }
-  .header .header__container .header__item .header__svg--special {
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0;
-  }
-  .header .header__container .header__item .header__link--special:hover .header__svg {
-    opacity: 0;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-  .header .header__container .header__item .header__link--special:hover .header__svg--special {
-    opacity: 1;
+  .header .header__container .header__item .header__link--special:hover svg > path {
+    fill: #F0145A;
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
@@ -427,5 +415,117 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.wrapper__symbolH {
+  position: absolute;
+  top: 0;
+  left: -74px;
+  width: 449px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.wrapper__symbolH .symbolH {
+  width: 523.4px;
+  height: 600px;
+}
+
+.wrapper {
+  padding: 0 30px;
+}
+
+.title {
+  position: relative;
+  z-index: 4;
+  margin-top: 129px;
+  margin-right: 15px;
+  margin-bottom: 159px;
+  text-align: center;
+  font-size: 2.375rem;
+  font-weight: 700;
+  line-height: 2.895rem;
+  color: #ffffff;
+}
+
+.link__scroll {
+  position: relative;
+  left: calc(50% - 42px/2);
+  z-index: 10;
+}
+
+.link__scroll:hover .scroll__svg > circle,
+.link__scroll:hover .scroll__svg > path {
+  stroke: #F0145A;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper__symbolH {
+    left: -63px;
+    width: 831px;
+    height: 1024px;
+  }
+  .wrapper__symbolH .symbolH {
+    width: 893.28px;
+    height: 1024px;
+  }
+  .wrapper {
+    padding: 0 60px;
+  }
+  .title {
+    margin-top: 270px;
+    margin-bottom: 417px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper__symbolH {
+    left: 17.28%;
+    width: 669.96px;
+    height: 768px;
+  }
+  .wrapper__symbolH .symbolH {
+    width: 669.96px;
+    height: 768px;
+  }
+  .title {
+    margin-top: 221px;
+    margin-bottom: 289px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper__symbolH {
+    left: 25.833%;
+    width: 697px;
+    height: 799px;
+  }
+  .wrapper__symbolH .symbolH {
+    width: 697px;
+    height: 799px;
+  }
+  .title {
+    margin-top: 237px;
+    margin-bottom: 305px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .wrapper__symbolH {
+    left: 27.291%;
+    width: 872px;
+    height: 1000px;
+  }
+  .wrapper__symbolH .symbolH {
+    width: 872px;
+    height: 1000px;
+  }
+  .wrapper {
+    padding: 0 160px;
+  }
+  .title {
+    margin-top: 362px;
+    margin-bottom: 405px;
+  }
 }
 /*# sourceMappingURL=styly.css.map */
