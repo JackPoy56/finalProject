@@ -1,7 +1,3 @@
-body {
-    background-color: #323264;
-}
-
 .header {
     @include flex (column, space-between);
 
