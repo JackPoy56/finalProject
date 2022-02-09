@@ -323,6 +323,79 @@ a {
     }    
 }
 
+.subtitle {
+    margin-bottom: 60px;
+    margin-top: 30px;
+
+
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #323264;
+}
+
+.grid__item {
+    @include flex (row, center);
+    align-items: center;
+
+    width: 100%;
+    height: 120px;    
+}
+
+.grid__item--special {
+    display: none;
+}
+
+.grid__item:nth-child(1) {
+    background: #1C4280;    
+}
+
+.grid__item:nth-child(2) {
+    background: #143646;    
+}
+
+.grid__item:nth-child(3) {
+    background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;   
+}
+
+.grid__item:nth-child(4) {
+    background: #9E4DC3;        
+}
+
+.grid__item:nth-child(5) {
+    background: #FD9339;   
+}
+
+.grid__item:nth-child(6) {
+    background: #E2E2E4;  
+}
+
+.grid__item:nth-child(7) {
+    background: #C71C36;   
+}
+
+.grid__item:nth-child(8) {
+    background: #DCF3F9;   
+}
+
+.grid__item:nth-child(9) {
+    background: #EAEAEA;  
+}
+
+.grid__item:nth-child(10) {
+    background: #282240;
+}
+
+.grid__item:nth-child(11) {
+    background: #1D4568;   
+}
+
+.grid__item:nth-child(12) {
+    background: #000000;   
+}
 
 @media screen and (min-width: 768px) {
     .wrapper__symbolH {        
@@ -413,6 +486,19 @@ a {
             line-height: 2.875rem;         
         }
     }
+
+    .grid {
+        @include flex (row, space-between);
+        flex-wrap: wrap;
+    }
+
+    .grid__item { 
+        width: calc(100%/3);            
+    }
+    
+    .grid__item--special {
+        display: flex;
+    }
 }        
 
 @media screen and (min-width: 1024px) {
@@ -485,6 +571,10 @@ a {
             width: 55.752%;
             border-radius: 0px 12px 0px 0px;
         }        
+    }
+
+    .grid__item { 
+        width: calc(100%/4);            
     }
 }
 
@@ -566,7 +656,28 @@ a {
         }  
 
         .slider__wrapper {
-            width: 75%;
+            width: 75%;            
         }
+    }
+
+    .grid {
+        margin: 0 100px 60px;
+        border-radius: 50%;       
+    }
+
+    .grid__item:nth-child(1) {
+        border-radius: 12px 0 0 0;   
+    }
+    
+    .grid__item:nth-child(4) {
+        border-radius: 0 12px 0 0;     
+    }
+    
+    .grid__item:nth-child(9) {
+        border-radius: 0 0 0 12px;   
+    }
+    
+    .grid__item:nth-child(12) {
+        border-radius: 0 0 12px 0;         
     }
 } 
