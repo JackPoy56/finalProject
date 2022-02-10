@@ -495,6 +495,7 @@ a {
   margin-bottom: 120px;
 }
 
+/*----MAIN----*/
 .main {
   margin-top: 60px;
 }
@@ -572,8 +573,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 10px;
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.0625rem;
@@ -630,6 +631,7 @@ a {
   color: #ffffff;
 }
 
+/*----SLIDER----*/
 .slider {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -672,39 +674,28 @@ a {
 .slider .slider__img {
   width: 100%;
   height: 500px;
-  background: #EDEDF7 url(../img/Team-1.png) 50% 100% no-repeat;
+  background: #EDEDF7 url(../img/OleksandrOleksandrovsky.png) 50% 100% no-repeat;
   background-size: cover;
   border-radius: 12px 12px 0px 0px;
 }
 
 .slider .slider__img--special {
-  background: #EDEDF7 url(../img/Team-2.png) 50% 100% no-repeat;
+  background: #EDEDF7 url(../img/EvgenyPatrikov.png) 50% 100% no-repeat;
   background-size: cover;
 }
 
 .slider .slider__img--changed {
-  background: #EDEDF7 url(../img/Team-3.png) 50% 100% no-repeat;
+  background: #EDEDF7 url(../img/VladislavMelnik.png) 50% 100% no-repeat;
   background-size: cover;
 }
 
 .slider .slider__wrapper {
-  padding: 30px;
+  padding: 0 30px 30px;
   background: #F5F5FA;
 }
 
 .slider .slider__svg {
   width: 100%;
-}
-
-.slider .slider__title {
-  margin-bottom: 30px;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 700;
-  word-wrap: break-word;
-  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .slider .slider__text,
@@ -741,6 +732,17 @@ a {
   opacity: 1;
 }
 
+.heading {
+  padding-bottom: 30px;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  word-wrap: break-word;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .subtitle {
   margin-bottom: 60px;
   margin-top: 30px;
@@ -752,6 +754,7 @@ a {
   color: #323264;
 }
 
+/*----GRID----*/
 .grid__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -823,6 +826,60 @@ a {
   background: #000000;
 }
 
+/*----SECTION----*/
+.wrapper--changed {
+  background: #F5F5FA;
+}
+
+.section__item {
+  padding-bottom: 30px;
+}
+
+.section__item .section__img {
+  height: 200px;
+  background: #EDEDF7 url(../img/work.png) 50% 50% no-repeat;
+  background-size: cover;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.section__item .section__img--special {
+  background: #EDEDF7 url(../img/gdpr.png) 55% 50% no-repeat;
+  background-size: cover;
+}
+
+.section__item .section__img--changed {
+  background: #EDEDF7 url(../img/team.png) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.section__item .section__wrapper {
+  padding: 30px;
+  background: #ffffff;
+}
+
+.section__item .section__title {
+  margin-bottom: 15px;
+  line-height: 1.1875rem;
+  font-weight: 700;
+  color: #24A3FF;
+}
+
+.section__item .section__subtitle {
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #B3B3BA;
+}
+
+.section__item .section__text {
+  margin-top: 15px;
+  padding-top: 15px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  border-top: 4px solid #E6E6F0;
+}
+
 @media screen and (min-width: 768px) {
   .wrapper__symbolH {
     left: -63px;
@@ -840,6 +897,7 @@ a {
     margin-top: 270px;
     margin-bottom: 417px;
   }
+  /*----MAIN----*/
   .main {
     margin-top: 90px;
   }
@@ -858,7 +916,7 @@ a {
     line-height: 2.3125rem;
   }
   .title__link {
-    margin-top: 60px;
+    padding-top: 60px;
   }
   .title__link--special {
     margin-top: 0;
@@ -886,22 +944,24 @@ a {
     width: 45.37%;
     margin-top: 60px;
   }
+  /*----SLIDER----*/
   .slider .slider__img {
-    background: #EDEDF7 url(../img/Team-1.png) 50% 50% no-repeat;
+    background: #EDEDF7 url(../img/OleksandrOleksandrovsky.png) 50% 50% no-repeat;
     background-size: cover;
   }
   .slider .slider__img--special {
-    background: #EDEDF7 url(../img/Team-2.png) 50% 50% no-repeat;
+    background: #EDEDF7 url(../img/EvgenyPatrikov.png) 50% 50% no-repeat;
     background-size: cover;
   }
   .slider .slider__img--changed {
-    background: #EDEDF7 url(../img/Team-3.png) 50% 50% no-repeat;
+    background: #EDEDF7 url(../img/VladislavMelnik.png) 50% 50% no-repeat;
     background-size: cover;
   }
-  .slider .slider__title {
+  .heading {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
+  /*----GRID----*/
   .grid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -924,6 +984,39 @@ a {
     display: -ms-flexbox;
     display: flex;
   }
+  /*----SECTION----*/
+  .section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: calc(100%/2 - 15px);
+  }
+  .section__item .section__wrapper {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+  }
+  .section__item--special {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -940,6 +1033,7 @@ a {
     margin-top: 221px;
     margin-bottom: 289px;
   }
+  /*----MAIN----*/
   .main__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -987,6 +1081,7 @@ a {
   .main__box {
     width: 28.9%;
   }
+  /*----SLIDER----*/
   .slider .slider__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1008,8 +1103,14 @@ a {
     width: 55.752%;
     border-radius: 0px 12px 0px 0px;
   }
+  /*----GRID----*/
   .grid__item {
     width: calc(100%/4);
+  }
+  /*----SECTION----*/
+  .section__item,
+  .section__item--special {
+    width: calc(100%/3 - 15px);
   }
 }
 
@@ -1027,6 +1128,7 @@ a {
     margin-top: 237px;
     margin-bottom: 305px;
   }
+  /*----MAIN----*/
   .main__nav {
     margin-right: 60px;
     padding-right: 60px;
@@ -1038,6 +1140,7 @@ a {
   .main__box {
     width: 27.77%;
   }
+  /*----SLIDER----*/
   .slider .slider__img {
     width: 30.3%;
     height: 344px;
@@ -1064,9 +1167,11 @@ a {
     margin-top: 362px;
     margin-bottom: 405px;
   }
+  /*----MAIN----*/
   .main__box {
     width: 30.83%;
   }
+  /*----SLIDER----*/
   .slider .slider__img {
     width: 25%;
     height: 298px;
@@ -1074,6 +1179,7 @@ a {
   .slider .slider__wrapper {
     width: 75%;
   }
+  /*----GRID----*/
   .grid {
     margin: 0 100px 60px;
     border-radius: 50%;
