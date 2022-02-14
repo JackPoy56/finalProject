@@ -317,11 +317,6 @@
   border-bottom: 2px solid;
 }
 
-.header .header__container .nav .nav__link--special {
-  color: #F0145A;
-  border-bottom: 2px solid;
-}
-
 @media screen and (min-width: 768px) {
   .header {
     padding: 50px 60px 5px 60px;
@@ -417,6 +412,10 @@
   }
   .header .header__container .nav .nav__link--color {
     color: #24A3FF;
+  }
+  .header .header__container .nav .nav__link--special {
+    color: #F0145A;
+    border-bottom: 2px solid;
   }
 }
 
@@ -1520,6 +1519,16 @@ a {
   line-height: 1.625rem;
   border: 1px solid #FFFFFF;
   border-radius: 8px;
+}
+
+.inner .form input:invalid {
+  outline: 1px solid #FF0000;
+  color: #e70042;
+}
+
+.inner .form input:disabled {
+  background: #EDEDF7;
+  border: 1px solid #EDEDF7;
 }
 
 .inner .form input:focus {

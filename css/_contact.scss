@@ -90,6 +90,16 @@
 
             border: 1px solid #FFFFFF;
             border-radius: 8px; 
+            
+            &:invalid {                
+                outline: 1px solid #FF0000;
+                color: #e70042;  
+            }
+            
+            &:disabled {                
+                background: #EDEDF7;
+                border: 1px solid #EDEDF7;
+            }
 
             &:focus {
                 outline: 1px solid #24A3FF;
@@ -101,7 +111,7 @@
                 line-height: 1.625rem; 
     
                 color: #B3B3BA;                
-            }
+            } 
         }
 
         .textarea {

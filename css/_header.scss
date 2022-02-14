@@ -275,12 +275,7 @@
                 &:hover {
                     border-bottom: 2px solid;
                 }
-            }
-
-            .nav__link--special {
-                color: #F0145A;                
-                border-bottom: 2px solid;
-            }
+            }            
         }
     }
 }
@@ -387,6 +382,11 @@
                 
                 .nav__link--color { 
                     color: #24A3FF;
+                }
+
+                .nav__link--special {
+                    color: #F0145A;                
+                    border-bottom: 2px solid;
                 }
             }
         }
