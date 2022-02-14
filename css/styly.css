@@ -650,6 +650,8 @@ a {
 }
 
 .title__link--special {
+  position: relative;
+  z-index: 10;
   margin-top: 0;
   margin-bottom: 5px;
 }
@@ -785,6 +787,10 @@ a {
 
 .slider .slider__control input:checked + label > svg > circle {
   opacity: 1;
+}
+
+.slider .slider__control input:hover + label > svg > circle {
+  opacity: 0.6;
 }
 
 .heading {
