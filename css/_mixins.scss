@@ -3,3 +3,8 @@
     flex-direction: $direction;
     justify-content: $justify;
 }     
+
+@mixin textGradient {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
