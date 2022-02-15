@@ -105,6 +105,10 @@ a {
     margin-top: 60px;
 }
 
+.main--special {
+    margin-top: 25px;
+}
+
 .main__nav {
     @include flex (row, space-between);
     flex-wrap: wrap;
@@ -337,8 +341,8 @@ a {
 }
 
 .subtitle {
-    margin-bottom: 60px;
-    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-top: 60px;
 
 
     font-size: 0.875rem;
@@ -348,6 +352,10 @@ a {
     text-transform: uppercase;
 
     color: $colorsMain;
+}
+
+.subtitle--special {
+    margin-top: 80px;
 }
 
 /*----GRID----*/
@@ -506,6 +514,14 @@ a {
         margin-top: 90px;
     }
 
+    .main--special {
+        margin-top: 10px;
+    }
+
+    .main--special {
+        margin-top: 55px;
+    }
+
     .main__nav {
         padding-bottom: 60px;
 
@@ -628,6 +644,10 @@ a {
     }
 
     /*----MAIN----*/
+
+    .main--special {
+        margin-top: 30px;
+    }
 
     .main__container {
         @include flex (row, center);
@@ -771,6 +791,10 @@ a {
     }
 
     /*----MAIN----*/
+
+    .main--special {
+        margin-top: 55px;
+    }
 
     .main__box {      
         width: 30.83%; 
