@@ -920,6 +920,44 @@ a {
   background: #F5F5FA;
 }
 
+.switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 233px;
+  padding: 2px;
+  background: #E6E6F0;
+  border-radius: 12px;
+}
+
+.switch .switch__link {
+  padding: 8px 0 10px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.25rem;
+  color: #323264;
+  border-radius: 10px;
+}
+
+.switch .switch__link:hover {
+  background: #F5F5FA;
+}
+
+.switch .switch__link--special {
+  background: #ffffff;
+}
+
 .section__item {
   padding-bottom: 30px;
 }
@@ -941,6 +979,16 @@ a {
   background-size: cover;
 }
 
+.section__item .section__img--modified {
+  background: #EDEDF7 url(../img/language.png) no-repeat;
+  background-size: cover;
+}
+
+.section__item .section__img--another {
+  background: #EDEDF7 url(../img/teacher.png) no-repeat;
+  background-size: cover;
+}
+
 .section__item .section__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -954,6 +1002,10 @@ a {
           justify-content: flex-start;
   padding: 30px;
   background: #ffffff;
+}
+
+.section__item .section__wrapper--special {
+  border-radius: 8px 8px 0px 0px;
 }
 
 .section__item .section__title {
@@ -985,6 +1037,30 @@ a {
   border-top: 4px solid #E6E6F0;
 }
 
+.section__button {
+  margin-left: calc(50% - 105.5px);
+  margin-bottom: 60px;
+  padding: 18px 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  color: #FFFFFF;
+  background-color: #24A3FF;
+  -webkit-box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+          box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  border: none;
+}
+
+.section__button:hover {
+  background: #0085FF;
+}
+
+.section__button:active {
+  background: #006CCF;
+}
+
 @media screen and (min-width: 768px) {
   .wrapper__symbolH {
     left: -63px;
@@ -997,6 +1073,9 @@ a {
   }
   .wrapper--special {
     padding: 0.1px 60px 0;
+  }
+  .wrapper--box {
+    margin-top: 60px;
   }
   .title {
     margin-top: 270px;
@@ -1138,6 +1217,9 @@ a {
   .wrapper__symbolH .symbolH {
     width: 669.96px;
     height: 768px;
+  }
+  .wrapper--box {
+    margin-top: 30px;
   }
   .title {
     margin-top: 221px;
@@ -1282,6 +1364,9 @@ a {
   }
   /*----MAIN----*/
   .main--special {
+    margin-top: 55px;
+  }
+  .wrapper--box {
     margin-top: 55px;
   }
   .main__box {
