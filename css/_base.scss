@@ -205,7 +205,7 @@ a {
     padding-bottom: 60px;
 }
 
-.main__subtitle--special {
+.main__subtitle--special {    
     margin-top: 30px;
     margin-bottom: 15px;
 
@@ -214,9 +214,15 @@ a {
     font-weight: 700;
 
     color: $colorsActive;
+
+    &:hover {
+        color: $colorsAccent;
+        transition: 0.2s all ease;
+    }
 }
 
 .main__box {
+    @include flex (column, flex-start);
     margin-top: 30px;
 }
 
@@ -433,6 +439,7 @@ a {
     }
 
     .section__wrapper {
+        @include flex (column, flex-start);
         padding: 30px;
 
         background: #ffffff;
@@ -444,6 +451,11 @@ a {
         font-weight: 700;
 
         color: $colorsActive;
+
+        &:hover {
+            color: $colorsAccent;
+            transition: 0.2s all ease;
+        }
     }
 
     .section__subtitle {  
